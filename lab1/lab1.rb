@@ -24,6 +24,33 @@ def prob6(nums)
    print rotated = nums[1], nums[2], nums[0];
 end
 
+def bouns1(nums,target)
+    for i in 0..nums.length() -1
+        j=i+1
+        for j in j..nums.length() -1 
+            if nums[j]==target - nums[i] 
+                puts i,j 
+            end
+        end
+    end
+end
+
+
+def prob7(nums)
+    sum = 0
+    i = 0
+    while i < nums.length
+            if(nums[i] == 17)
+             i= i + 1
+         else
+                sum = sum + nums[i]
+         end
+         i += 1
+     end
+        return sum
+ end
+
+
 # prob1('a',1)
 # prob1('a',2)
 # prob1('a',3)
@@ -53,5 +80,9 @@ end
 
 # prob6([1, 2, 5])
 # prob6([1, 2, 3])
-prob6([1, 2, 4])
+# prob6([1, 2, 4])
 
+# bouns1([3,2,4],6)
+# bouns1([2,7,11,15],9)
+
+print prob7([3, 5, 17, 6])
